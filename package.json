@@ -1,0 +1,21 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "This is just a react app",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "vite"
+  },
+  "author": "Sourabh Bagde",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.4.1",
+    "parcel": "^2.14.4",
+    "vite": "^6.3.2"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
