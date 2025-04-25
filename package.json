@@ -5,7 +5,8 @@
   "main": "App.js",
   "scripts": {
     "test": "jest",
-    "dev": "vite"
+    "start": "vite",
+    "build": "vite build"
   },
   "author": "Sourabh Bagde",
   "license": "ISC",
@@ -17,5 +18,8 @@
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
-  }
+  },
+  "browserList": [
+    "last 2 versions"
+  ]
 }
