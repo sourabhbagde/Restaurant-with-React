@@ -1,16 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import appLogo from '../Project1/assets/restaurant.png';
-import gfc from '../Project1/assets/gfc.png';
-import biryanihouse from '../Project1/assets/biryanihouse.png';
-import dinapolipizzeria from '../Project1/assets/dinapolipizzeria.png';
-import goldendragon from '../Project1/assets/goldendragon.png';
-import indianspice from '../Project1/assets/indianspice.png';
-import grillmaster from '../Project1/assets/grillmaster.png';
-import lotusblossom from '../Project1/assets/lotusblossom.png';
-import ninaskitchen from '../Project1/assets/ninaskitchen.png';
-import sabrosataqueria from '../Project1/assets/sabrosataqueria.png';
-import saffronpalace from '../Project1/assets/saffronpalace.png';
+import {
+  gfc,
+  biryanihouse,
+  dinapolipizzeria,
+  goldendragon,
+  indianspice,
+  grillmaster,
+  lotusblossom,
+  ninaskitchen,
+  sabrosataqueria,
+  saffronpalace,
+} from './assets/restaurantImages';
 
 // React element
 // const parent = <h3 id="heading">This is JSX h1 tag</h3>;
@@ -222,17 +224,19 @@ const Header = () => {
 };
 const RestaurantCard = (props) => {
   const { restaurantData } = props;
+  const { name, cuisines, rating, deliveryTime, restaurantImage } =
+    restaurantData?.data;
   return (
     <div className="restaurant-card">
       <img
         className="restaurant-logo"
         alt="Restaurant Image"
-        src={restaurantData.data.restaurantImage}
+        src={restaurantImage}
       ></img>
-      <h3>{restaurantData.data.name}</h3>
-      <h4>{restaurantData.data.cuisines}</h4>
-      <h4>Rating 🌟 {restaurantData.data.rating} stars</h4>
-      <h4>Delivery Time: {restaurantData.data.deliveryTime} minutes</h4>
+      <h3>{name}</h3>
+      <h4>{cuisines.join(', ')}</h4>
+      <h4>Rating 🌟 {rating} stars</h4>
+      <h4>Delivery Time: {deliveryTime} minutes</h4>
     </div>
   );
 };
@@ -241,15 +245,12 @@ const Body = () => {
     <div className="body">
       <div className="search-bar">Search Bar</div>
       <div className="restaurant-container">
-        <RestaurantCard restaurantData={restaurantList[0]} />
-        <RestaurantCard restaurantData={restaurantList[1]} />
-        <RestaurantCard restaurantData={restaurantList[2]} />
-        <RestaurantCard restaurantData={restaurantList[3]} />
-        <RestaurantCard restaurantData={restaurantList[4]} />
-        <RestaurantCard restaurantData={restaurantList[5]} />
-        <RestaurantCard restaurantData={restaurantList[6]} />
-        <RestaurantCard restaurantData={restaurantList[7]} />
-        <RestaurantCard restaurantData={restaurantList[8]} />
+        {restaurantList.map((restaurant) => (
+          <RestaurantCard
+            key={restaurant.data.id}
+            restaurantData={restaurant}
+          />
+        ))}
       </div>
     </div>
   );
