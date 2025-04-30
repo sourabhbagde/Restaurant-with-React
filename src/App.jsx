@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import appLogo from '../Project1/assets/restaurant.png';
+import Header from './components/Header';
 import {
   gfc,
   biryanihouse,
@@ -12,7 +12,7 @@ import {
   ninaskitchen,
   sabrosataqueria,
   saffronpalace,
-} from './assets/restaurantImages';
+} from '../assets/restaurantImages';
 
 // React element
 // const parent = <h3 id="heading">This is JSX h1 tag</h3>;
@@ -205,23 +205,7 @@ const restaurantList = [
     },
   },
 ];
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" src={appLogo} alt="Restaurant App Logo"></img>
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
+
 const RestaurantCard = (props) => {
   const { restaurantData } = props;
   const { name, cuisines, rating, deliveryTime, restaurantImage } =
