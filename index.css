@@ -45,3 +45,16 @@
   margin: 10px;
   cursor: pointer;
 }
+
+.shimmer-cotainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: blue;
+}
+
+.shimmer-card {
+  width: 200px;
+  height: 400px;
+  margin: 20px;
+  background-color: blue;
+}

@@ -1,11 +1,21 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import restaurantList from '../utils/mockData';
 import RestaurantCard from './RestaurantCard';
+import Shimmer from './Shimmer';
 
 const Body = () => {
   const [restaurantListFiltered, setFilteredListOfRestaurant] =
     useState(restaurantList);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+  // const fetchData = () => {
+  //   const data = fetch();
+  // };
+  if (restaurantListFiltered.length === 0) {
+    return <Shimmer />;
+  }
   return (
     <div className="body">
       {/* <div className="search-bar">Search Bar</div> */}
