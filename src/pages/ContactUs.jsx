@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 
-const AboutUs = () => {
+const ContactUs = () => {
   return (
     <div>
       <Header />
@@ -9,4 +9,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default ContactUs;
