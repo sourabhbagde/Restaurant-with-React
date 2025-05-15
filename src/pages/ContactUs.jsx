@@ -5,6 +5,9 @@ const ContactUs = () => {
   return (
     <div>
       <Header />
+      <div className="contact-us-container">
+        <div className="contact-us">Contact Us</div>
+      </div>
     </div>
   );
 };
