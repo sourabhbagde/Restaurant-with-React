@@ -5,6 +5,9 @@ const AboutUs = () => {
   return (
     <div>
       <Header />
+      <div className="about-us-container">
+        <div className="about-us">About Us</div>
+      </div>
     </div>
   );
 };
