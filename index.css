@@ -19,6 +19,9 @@
   padding: 0px 20px;
   font-size: x-large;
 }
+.nav-items > ul > li > Link {
+  text-decoration: none;
+}
 
 .restaurant-card {
   width: 200px;
@@ -72,4 +75,8 @@
 .about-us {
   padding: 20px;
   font-size: xx-large;
+}
+
+.email {
+  color: red;
 }

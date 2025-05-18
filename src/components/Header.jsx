@@ -8,18 +8,26 @@ const Header = () => {
         <img className="logo" src={appLogo} alt="Restaurant App Logo"></img>
       </div>
       <div className="nav-items">
-        <ul>
+        <ul className="links">
           <li>
-            <Link to="/home">Home</Link>
+            <Link to="/" style={{ textDecoration: 'none' }}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about-us">About Us</Link>
+            <Link to="/about-us" style={{ textDecoration: 'none' }}>
+              About Us
+            </Link>
           </li>
           <li>
-            <Link to="/contact-us">Contact Us</Link>
+            <Link to="/contact-us" style={{ textDecoration: 'none' }}>
+              Contact Us
+            </Link>
           </li>
           <li>
-            <Link to="/cart">Cart</Link>
+            <Link to="/cart" style={{ textDecoration: 'none' }}>
+              Cart
+            </Link>
           </li>
         </ul>
       </div>

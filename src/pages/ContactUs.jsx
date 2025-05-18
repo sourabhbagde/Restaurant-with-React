@@ -1,13 +1,12 @@
 import React from 'react';
 import Header from '../components/Header';
+import ContactUsCard from '../components/ContactUsCard';
 
 const ContactUs = () => {
   return (
     <div>
       <Header />
-      <div className="contact-us-container">
-        <div className="contact-us">Contact Us</div>
-      </div>
+      <ContactUsCard />
     </div>
   );
 };
