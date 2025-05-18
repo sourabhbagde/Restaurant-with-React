@@ -10,7 +10,7 @@ const AppLayOut = () => {
     <div className="app">
       <Routes>
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
