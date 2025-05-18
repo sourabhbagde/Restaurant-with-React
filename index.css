@@ -69,6 +69,7 @@
 }
 .contact-us {
   padding: 20px;
+  margin: 50px;
   font-size: xx-large;
 }
 
@@ -79,4 +80,35 @@
 
 .email {
   color: red;
+}
+.contact-us-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.contact-us-card {
+  width: 400px;
+  height: 450px;
+  margin: 50px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 2.5%;
+  background-color: #e9e2d7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contact-info {
+  height: 35px;
+  font-size: large;
+}
+
+.submit-btn {
+  height: 40px;
+  width: 100px;
+}
+
+.contact-info-message {
+  height: 120px;
+  font-size: large;
 }
