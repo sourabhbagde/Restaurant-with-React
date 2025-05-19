@@ -36,8 +36,7 @@ const Header = () => {
               const logoutBtn = loginBtn;
               if (logoutBtn == 'Logout') {
                 setLoginBtn('Login');
-              }
-              if (logoutBtn == 'Login') {
+              } else {
                 setLoginBtn('Logout');
               }
             }}
