@@ -35,11 +35,9 @@ const Header = () => {
             onClick={() => {
               const logoutBtn = loginBtn;
               if (logoutBtn == 'Logout') {
-                // const logoutBtnUpdated = 'Login';
                 setLoginBtn('Login');
               }
               if (logoutBtn == 'Login') {
-                // const loginBtnUpdated = 'Logout';
                 setLoginBtn('Logout');
               }
             }}
