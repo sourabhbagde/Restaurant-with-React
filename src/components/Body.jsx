@@ -21,7 +21,10 @@ const Body = () => {
     <div className="body">
       {/* <div className="search-bar">Search Bar</div> */}
       <div className="filter">
-        <SearchFilter />
+        <SearchFilter
+          restaurantListFiltered={restaurantListFiltered}
+          setFilteredListOfRestaurant={setFilteredListOfRestaurant}
+        />
         <div className="filter-container">
           <button
             className="filter-btn"
