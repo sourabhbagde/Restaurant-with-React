@@ -1,14 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const SearchFilter = () => {
+const SearchFilter = ({
+  restaurantListFiltered,
+  setFilteredListOfRestaurant,
+}) => {
+  const [searchText, setSearchText] = useState('');
+
   return (
     <div className="search-container">
       <input
         type="text"
         placeholder="search here..."
         className="search-box"
+        value={searchText}
+        onChange={(e) => {
+          setSearchText(e.target.value);
+        }}
       ></input>
-      <button className="search-btn">Search</button>
+      <button
+        className="search-btn"
+        onClick={() => {
+          const searchedList = restaurantListFiltered.filter((res) =>
+            res.data.name.includes(searchText),
+          );
+          setFilteredListOfRestaurant(searchedList);
+        }}
+      >
+        Search
+      </button>
     </div>
   );
 };
