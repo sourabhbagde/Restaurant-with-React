@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import restaurantList from '../utils/mockData';
 import RestaurantCard from './RestaurantCard';
 import Shimmer from './Shimmer';
+import SearchFilter from './SearchFilter';
 
 const Body = () => {
   const [restaurantListFiltered, setFilteredListOfRestaurant] =
@@ -20,6 +21,7 @@ const Body = () => {
     <div className="body">
       {/* <div className="search-bar">Search Bar</div> */}
       <div className="filter">
+        <SearchFilter />
         <button
           className="filter-btn"
           onClick={() => {
