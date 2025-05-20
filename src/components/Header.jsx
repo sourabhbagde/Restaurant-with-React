@@ -33,12 +33,9 @@ const Header = () => {
           <button
             className="login-button"
             onClick={() => {
-              const logoutBtn = loginBtn;
-              if (logoutBtn == 'Logout') {
-                setLoginBtn('Login');
-              } else {
-                setLoginBtn('Logout');
-              }
+              loginBtn === 'Login'
+                ? setLoginBtn('Logout')
+                : setLoginBtn('Login');
             }}
           >
             {loginBtn}
