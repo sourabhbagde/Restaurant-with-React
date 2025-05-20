@@ -22,20 +22,22 @@ const Body = () => {
       {/* <div className="search-bar">Search Bar</div> */}
       <div className="filter">
         <SearchFilter />
-        <button
-          className="filter-btn"
-          onClick={() => {
-            console.log('Button Clicked');
+        <div className="filter-container">
+          <button
+            className="filter-btn"
+            onClick={() => {
+              console.log('Button Clicked');
 
-            const filteredList = restaurantList.filter(
-              (res) => res.data.rating >= 4.5,
-            );
-            setFilteredListOfRestaurant(filteredList);
-            console.log(filteredList);
-          }}
-        >
-          Top Rated Restaurants
-        </button>
+              const filteredList = restaurantList.filter(
+                (res) => res.data.rating >= 4.5,
+              );
+              setFilteredListOfRestaurant(filteredList);
+              console.log(filteredList);
+            }}
+          >
+            Top Rated Restaurants
+          </button>
+        </div>
       </div>
       <div className="restaurant-container">
         {restaurantListFiltered.map((restaurant) => (
