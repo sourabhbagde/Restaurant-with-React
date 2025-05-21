@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const SearchFilter = ({
   restaurantListFiltered,
-  setFilteredListOfRestaurant,
+  setFilteredListRestaurant,
 }) => {
   const [searchText, setSearchText] = useState('');
 
@@ -21,9 +21,9 @@ const SearchFilter = ({
         className="search-btn"
         onClick={() => {
           const searchedList = restaurantListFiltered.filter((res) =>
-            res.data.name.includes(searchText),
+            res.data.name.toLowerCase().includes(searchText.toLowerCase()),
           );
-          setFilteredListOfRestaurant(searchedList);
+          setFilteredListRestaurant(searchedList);
         }}
       >
         Search

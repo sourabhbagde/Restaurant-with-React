@@ -6,7 +6,9 @@ import Shimmer from './Shimmer';
 import SearchFilter from './SearchFilter';
 
 const Body = () => {
-  const [restaurantListFiltered, setFilteredListOfRestaurant] =
+  const [restaurantListToBeFiltered, setFilteredListToBeRestaurant] =
+    useState(restaurantList);
+  const [restaurantListFiltered, setFilteredListRestaurant] =
     useState(restaurantList);
   // useEffect(() => {
   //   fetchData();
@@ -14,7 +16,7 @@ const Body = () => {
   // const fetchData = () => {
   //   const data = fetch();
   // };
-  if (restaurantListFiltered.length === 0) {
+  if (restaurantListToBeFiltered.length === 0) {
     return <Shimmer />;
   }
   return (
@@ -22,8 +24,8 @@ const Body = () => {
       {/* <div className="search-bar">Search Bar</div> */}
       <div className="filter">
         <SearchFilter
-          restaurantListFiltered={restaurantListFiltered}
-          setFilteredListOfRestaurant={setFilteredListOfRestaurant}
+          restaurantListFiltered={restaurantList}
+          setFilteredListRestaurant={setFilteredListRestaurant}
         />
         <div className="filter-container">
           <button
@@ -34,7 +36,7 @@ const Body = () => {
               const filteredList = restaurantList.filter(
                 (res) => res.data.rating >= 4.5,
               );
-              setFilteredListOfRestaurant(filteredList);
+              setFilteredListRestaurant(filteredList);
               console.log(filteredList);
             }}
           >
