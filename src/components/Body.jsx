@@ -3,9 +3,12 @@ import { useState, useEffect } from 'react';
 import restaurantList from '../utils/mockData';
 import RestaurantCard from './RestaurantCard';
 import Shimmer from './Shimmer';
+import SearchFilter from './SearchFilter';
 
 const Body = () => {
-  const [restaurantListFiltered, setFilteredListOfRestaurant] =
+  const [restaurantListToBeFiltered, setFilteredListToBeRestaurant] =
+    useState(restaurantList);
+  const [restaurantListFiltered, setFilteredListRestaurant] =
     useState(restaurantList);
   // useEffect(() => {
   //   fetchData();
@@ -13,27 +16,33 @@ const Body = () => {
   // const fetchData = () => {
   //   const data = fetch();
   // };
-  if (restaurantListFiltered.length === 0) {
+  if (restaurantListToBeFiltered.length === 0) {
     return <Shimmer />;
   }
   return (
     <div className="body">
       {/* <div className="search-bar">Search Bar</div> */}
       <div className="filter">
-        <button
-          className="filter-btn"
-          onClick={() => {
-            console.log('Button Clicked');
+        <SearchFilter
+          restaurantListFiltered={restaurantList}
+          setFilteredListRestaurant={setFilteredListRestaurant}
+        />
+        <div className="filter-container">
+          <button
+            className="filter-btn"
+            onClick={() => {
+              console.log('Button Clicked');
 
-            const filteredList = restaurantList.filter(
-              (res) => res.data.rating >= 4.5,
-            );
-            setFilteredListOfRestaurant(filteredList);
-            console.log(filteredList);
-          }}
-        >
-          Top Rated Restaurants
-        </button>
+              const filteredList = restaurantList.filter(
+                (res) => res.data.rating >= 4.5,
+              );
+              setFilteredListRestaurant(filteredList);
+              console.log(filteredList);
+            }}
+          >
+            Top Rated Restaurants
+          </button>
+        </div>
       </div>
       <div className="restaurant-container">
         {restaurantListFiltered.map((restaurant) => (

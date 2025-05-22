@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import appLogo from '../../assets/restaurant.png';
 const Header = () => {
+  const [loginBtn, setLoginBtn] = useState('Login');
   return (
     <div className="header">
       <div className="logo-container">
@@ -29,6 +30,16 @@ const Header = () => {
               Cart
             </Link>
           </li>
+          <button
+            className="login-button"
+            onClick={() => {
+              loginBtn === 'Login'
+                ? setLoginBtn('Logout')
+                : setLoginBtn('Login');
+            }}
+          >
+            {loginBtn}
+          </button>
         </ul>
       </div>
     </div>
