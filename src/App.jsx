@@ -5,6 +5,7 @@ import AboutUs from './pages/AboutUs';
 import Home from './pages/Home';
 import ContactUs from './pages/ContactUs';
 import Cart from './pages/Cart';
+import CardDetails from './pages/CardDetails';
 const AppLayOut = () => {
   return (
     <div className="app">
@@ -13,6 +14,7 @@ const AppLayOut = () => {
         <Route path="/" element={<Home />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/card-details" element={<CardDetails />} />
       </Routes>
     </div>
   );
