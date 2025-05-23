@@ -137,3 +137,23 @@
 .filter-container {
   padding: 20px;
 }
+
+.restaurant-profile-img {
+  width: 300px;
+  height: 300px;
+}
+.restaurant-profile-container {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 5%; */
+  padding: 20px 150px;
+}
+.restaurant-map {
+  border: 1px solid black;
+  width: 500px;
+}
+
+.restaurant-card-link {
+  text-decoration: none;
+  color: inherit;
+}
