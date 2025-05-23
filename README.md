@@ -1,7 +1,8 @@
 # Just a react app
 
 # Give a visit here :
-[![Netlify Status](https://img.shields.io/badge/Live%20Demo-Netlify-green?logo=netlify)](https://682fdfbbf67097ff0c18a0eb--stalwart-eclair-f1e4f8.netlify.app/)
+[![Restaurant App](https://img.shields.io/badge/Live%20Site-Restaurant%20App-orange?logo=netlify)](https://682fdfbbf67097ff0c18a0eb--stalwart-eclair-f1e4f8.netlify.app/)
+
 
 https://682fdfbbf67097ff0c18a0eb--stalwart-eclair-f1e4f8.netlify.app/
 
