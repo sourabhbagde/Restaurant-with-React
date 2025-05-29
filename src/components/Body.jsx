@@ -21,7 +21,6 @@ const Body = () => {
   }
   return (
     <div className="body">
-      {/* <div className="search-bar">Search Bar</div> */}
       <div className="filter">
         <SearchFilter
           restaurantListFiltered={restaurantList}
