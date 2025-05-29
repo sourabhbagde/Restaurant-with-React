@@ -11,24 +11,28 @@ const Header = () => {
       <div className="nav-items">
         <ul className="links">
           <li>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            Home
+            {/* <Link to="/" style={{ textDecoration: 'none' }}>
               Home
-            </Link>
+            </Link> */}
           </li>
           <li>
-            <Link to="/about-us" style={{ textDecoration: 'none' }}>
+            About Us
+            {/* <Link to="/about-us" style={{ textDecoration: 'none' }}>
               About Us
-            </Link>
+            </Link> */}
           </li>
           <li>
-            <Link to="/contact-us" style={{ textDecoration: 'none' }}>
+            Contact Us
+            {/* <Link to="/contact-us" style={{ textDecoration: 'none' }}>
               Contact Us
-            </Link>
+            </Link> */}
           </li>
           <li>
-            <Link to="/cart" style={{ textDecoration: 'none' }}>
+            Cart
+            {/* <Link to="/cart" style={{ textDecoration: 'none' }}>
               Cart
-            </Link>
+            </Link> */}
           </li>
           <button
             className="login-button"
