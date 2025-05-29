@@ -5,6 +5,7 @@ import AboutUs from './pages/AboutUs';
 import Home from './pages/Home';
 import ContactUs from './pages/ContactUs';
 import Cart from './pages/Cart';
+import Error from './components/Error';
 
 const AppLayOut = () => {
   return (
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <AppLayOut />,
+    errorElement: <Error />,
   },
   {
     path: '/about-us',
