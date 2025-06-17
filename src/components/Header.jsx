@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { RESTAURANTNAME } from '../utils/constants';
 
 import appLogo from '../../assets/restaurant.png';
 const Header = () => {
@@ -8,6 +9,8 @@ const Header = () => {
       <div className="logo-container">
         <img className="logo" src={appLogo} alt="Restaurant App Logo"></img>
       </div>
+      <span className="restaurant-name">{RESTAURANTNAME}</span>
+
       <div className="nav-items">
         <ul className="links">
           <li>Home</li>
