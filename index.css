@@ -157,3 +157,13 @@
   text-decoration: none;
   color: inherit;
 }
+.restaurant-name {
+  padding: 20px 0px;
+  margin: 5px 5px;
+  font-size: 24px;
+}
+
+.caution {
+  padding: 10px 10px;
+  margin: 10px 10px;
+}

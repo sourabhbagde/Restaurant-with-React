@@ -8,6 +8,7 @@ import lotusblossom from './lotusblossom.png';
 import ninaskitchen from './ninaskitchen.png';
 import sabrosataqueria from './sabrosataqueria.png';
 import saffronpalace from './saffronpalace.png';
+import errorGif from './error.gif';
 
 export {
   gfc,
@@ -20,4 +21,5 @@ export {
   ninaskitchen,
   sabrosataqueria,
   saffronpalace,
+  errorGif,
 };

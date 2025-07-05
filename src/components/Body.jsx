@@ -21,7 +21,11 @@ const Body = () => {
   }
   return (
     <div className="body">
-      {/* <div className="search-bar">Search Bar</div> */}
+      <div className="caution">
+        Add extension to link with : /contact-us , /about-us , /home , /cart ,
+        to see other pages. Currently not linked to tab menu due to other
+        components build.
+      </div>
       <div className="filter">
         <SearchFilter
           restaurantListFiltered={restaurantList}
