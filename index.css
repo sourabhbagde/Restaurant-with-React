@@ -167,3 +167,15 @@
   padding: 10px 10px;
   margin: 10px 10px;
 }
+
+.link-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.link-item a:hover {
+  color: rgb(86, 161, 211);
+}
+.link-item a.active {
+  color: blue;
+}
