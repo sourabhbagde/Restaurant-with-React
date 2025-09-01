@@ -21,11 +21,11 @@ const Body = () => {
   }
   return (
     <div className="body">
-      <div className="caution">
+      {/* <div className="caution"> - Resolved using React Router.
         Add extension to link with : /contact-us , /about-us , /home , /cart ,
         to see other pages. Currently not linked to tab menu due to other
         components build.
-      </div>
+      </div> */}
       <div className="filter">
         <SearchFilter
           restaurantListFiltered={restaurantList}
