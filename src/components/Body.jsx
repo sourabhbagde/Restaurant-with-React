@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import restaurantList from '../utils/mockData';
+import restaurantList from '../utils/restaurantListData';
 import RestaurantCard from './RestaurantCard';
 import Shimmer from './Shimmer';
 import SearchFilter from './SearchFilter';
