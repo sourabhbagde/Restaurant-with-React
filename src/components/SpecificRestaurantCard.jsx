@@ -1,5 +1,5 @@
 import React from 'react';
-import restaurantList from '../utils/mockData';
+import restaurantList from '../utils/restaurantListData';
 
 const SpecificRestaurantCard = () => {
   return (
@@ -9,12 +9,11 @@ const SpecificRestaurantCard = () => {
           <img
             className="restaurant-profile-img"
             alt="Restaurant Image"
-            // To Do : currently not tagged to main component...
-            src={restaurantList[0].data.restaurantImage}
+            src={restaurantList[1].data.restaurantImage}
           ></img>
-          <h3>{restaurantList[0].data.name}</h3>
+          <h3>{restaurantList[1].data.name}</h3>
           <h3>
-            {restaurantList[0].data.cuisines.map((cuisine, index) => (
+            {restaurantList[1].data.cuisines.map((cuisine, index) => (
               <span key={index}>
                 {cuisine}
                 <br />
@@ -29,7 +28,7 @@ const SpecificRestaurantCard = () => {
           There will be a map in this container
         </div>
       </div>
-      <div className="restaurant-menu">8 pc Chicken Bucket</div>
+      <div>8 pc Chicken Bucket</div>
     </div>
   );
 };
