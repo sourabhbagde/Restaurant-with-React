@@ -4,7 +4,8 @@
 
 [![Restaurant App](https://img.shields.io/badge/Live%20Site-Restaurant%20App-orange?logo=netlify)](https://682fdfbbf67097ff0c18a0eb--stalwart-eclair-f1e4f8.netlify.app/)
 
-https://682fdfbbf67097ff0c18a0eb--stalwart-eclair-f1e4f8.netlify.app/
+
+https://stalwart-eclair-f1e4f8.netlify.app/
 
 # to run manually at local:
 
