@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import restaurantList from '../utils/mockData';
+import restaurantList from '../utils/restaurantListData';
 import RestaurantCard from './RestaurantCard';
 import Shimmer from './Shimmer';
 import SearchFilter from './SearchFilter';
@@ -21,11 +21,11 @@ const Body = () => {
   }
   return (
     <div className="body">
-      <div className="caution">
+      {/* <div className="caution"> - Resolved using React Router.
         Add extension to link with : /contact-us , /about-us , /home , /cart ,
         to see other pages. Currently not linked to tab menu due to other
         components build.
-      </div>
+      </div> */}
       <div className="filter">
         <SearchFilter
           restaurantListFiltered={restaurantList}

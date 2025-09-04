@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { RESTAURANTNAME } from '../utils/constants';
+import { NavLink } from 'react-router-dom';
 
 import appLogo from '../../assets/restaurant.png';
 const Header = () => {
@@ -13,10 +14,38 @@ const Header = () => {
 
       <div className="nav-items">
         <ul className="links">
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
+          <li className="link-item" onClick={() => {}}>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li className="link-item">
+            <NavLink
+              to="/about-us"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              About Us
+            </NavLink>
+          </li>
+          <li className="link-item">
+            <NavLink
+              to="/contact-us"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              Contact Us
+            </NavLink>
+          </li>
+          <li className="link-item">
+            <NavLink
+              to="/cart"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              Cart
+            </NavLink>
+          </li>
           <button
             className="login-button"
             onClick={() => {
