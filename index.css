@@ -174,8 +174,8 @@
 }
 
 .link-item a:hover {
-  color: rgb(86, 161, 211);
+  color: #e9e2d7;
 }
 .link-item a.active {
-  color: blue;
+  color: #cc3a2e;
 }
