@@ -24,13 +24,18 @@
 }
 
 .restaurant-card {
+  color: black;
   width: 200px;
   margin: 5px;
   padding: 5px;
   border: 1px solid #f0f0f0;
 }
+.restaurant-link {
+  text-decoration: none;
+}
 .restaurant-card:hover {
   border: 1px solid black;
+  text-decoration: none;
   cursor: pointer;
 }
 .restaurant-container {
@@ -152,7 +157,6 @@
   border: 1px solid black;
   width: 500px;
 }
-
 .restaurant-card-link {
   text-decoration: none;
   color: inherit;
@@ -174,8 +178,8 @@
 }
 
 .link-item a:hover {
-  color: rgb(86, 161, 211);
+  color: #e9e2d7;
 }
 .link-item a.active {
-  color: blue;
+  color: #cc3a2e;
 }

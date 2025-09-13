@@ -3,7 +3,7 @@ import React from 'react';
 const RestaurantCard = (props) => {
   const { restaurantData } = props;
   const { name, cuisines, rating, deliveryTime, restaurantImage } =
-    restaurantData?.data;
+    restaurantData?.data || {}; // destructuring the restaurant data object to get the required details.
   return (
     <div className="restaurant-card">
       <img

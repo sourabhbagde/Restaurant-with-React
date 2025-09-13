@@ -47,7 +47,7 @@ const router = createBrowserRouter([
         element: <SpecificRestaurantCard />,
       },
       {
-        path: '/restaurantmenu',
+        path: '/restaurants/:resId',
         element: <RestaurantMenu />,
       },
     ],
