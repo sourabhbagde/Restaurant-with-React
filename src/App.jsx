@@ -1,7 +1,7 @@
 import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router';
-import AboutUs from './pages/AboutUs';
+import AboutUs from './components/AboutUs';
 import ContactUs from './pages/ContactUs';
 import Cart from './pages/Cart';
 import Error from './components/Error';

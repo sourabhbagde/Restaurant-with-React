@@ -183,3 +183,8 @@
 .link-item a.active {
   color: #cc3a2e;
 }
+
+.user-card {
+  padding: 10px;
+  border: 1px solid black;
+}
