@@ -185,6 +185,12 @@
 }
 
 .user-card {
+  display: flex;
+  flex-direction: row;
   padding: 10px;
   border: 1px solid black;
+}
+
+.user-info {
+  padding-left: 20px;
 }
