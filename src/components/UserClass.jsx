@@ -1,35 +1,42 @@
 import React from 'react';
+import { EMAIL } from '../utils/constants';
 
 class UserClass extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: props.name,
-      email: props.email,
-      location: props.location,
+      userInfo: {
+        name: 'Dummy Name',
+        email: 'dummy@example.com',
+        location: 'Unknown',
+      },
     };
   }
-  // componentDidMount() {
-  //   console.log('UserClass mounted');
-  // }
+  async componentDidMount() {
+    const data = await fetch('https://api.github.com/users/sourabhbagde');
+    const json = await data.json();
+    this.setState({
+      userInfo: json,
+    });
+    this.timer = setInterval(() => {
+      console.log('I am from setInterval');
+    }, 1000);
+    console.log(json);
+  }
+  componentWillUnmount() {
+    console.log('Component will unmount');
+    clearInterval(this.timer);
+  }
   render() {
-    const { name, email, location } = this.state;
+    const { name, location, avatar_url } = this.state.userInfo;
     return (
       <div className="user-card">
-        <button
-          onClick={() => {
-            this.setState({
-              name: 'John Doe',
-              email: 'john.doe@example.com',
-              location: 'New York',
-            });
-          }}
-        >
-          Update Info
-        </button>
-        <h2>Name : {name}</h2>
-        <h3>Email: {email}</h3>
-        <h4>Location: {location}</h4>
+        <img src={avatar_url} alt={name} />
+        <div className="user-info">
+          <h2>Name : {name}</h2>
+          <h3>Email: {EMAIL}</h3>
+          <h4>Location: {location}</h4>
+        </div>
       </div>
     );
   }
