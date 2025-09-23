@@ -5,12 +5,6 @@ const AboutUs = () => {
   return (
     <div>
       <div className="about-us-container">
-        {/* <h2> About Us card created using functional component</h2>
-        <User
-          name={'Sourabh'}
-          email={'oujisavi@gmail.com'}
-          location={'Texas'}
-        /> */}
         <h2> About the Developer </h2>
         <UserClass
           name={'Sourabh'}
