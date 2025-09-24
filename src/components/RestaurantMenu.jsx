@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import restaurantList from '../utils/restaurantListData';
+import React from 'react';
+
+import useRestaurantMenu from '../utils/useRestaurantMenu';
 import { useParams } from 'react-router-dom';
 const RestaurantMenu = () => {
-  const [restaurantInfo, setRestaurantInfo] = useState(null);
   const { resId: id } = useParams(); // taken the restaurant ID from the URL as params.
-  useEffect(() => {
-    const restaurant = restaurantList.find((res) => res.data.id === id)?.data;
-    setRestaurantInfo(restaurant || null); // if restaurant not found, set to null such that it doesn't make it undefined.
-  }, [id]); // on change of id (as dependency) re-fetch / re-renders the restaurant info
-
+  const restaurantInfo = useRestaurantMenu(id);
   if (restaurantInfo === null) return <h2>Restaurant not found</h2>;
 
   const { name, cuisines, rating, deliveryTime } = restaurantInfo || {}; // destructuring the restaurant info object to get the required details.
