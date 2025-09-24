@@ -5,12 +5,14 @@ import RestaurantCard from './RestaurantCard';
 import Shimmer from './Shimmer';
 import SearchFilter from './SearchFilter';
 import { Link } from 'react-router-dom';
+import useLiveStatus from '../utils/useLiveStatus';
 
 const Body = () => {
   const [restaurantListToBeFiltered, setFilteredListToBeRestaurant] =
     useState(restaurantList);
   const [restaurantListFiltered, setFilteredListRestaurant] =
     useState(restaurantList);
+  const isOnline = useLiveStatus();
   // useEffect(() => {
   //   fetchData();
   // }, []);
@@ -19,6 +21,9 @@ const Body = () => {
   // };
   if (restaurantListToBeFiltered.length === 0) {
     return <Shimmer />;
+  }
+  if (isOnline === false) {
+    return <h1> You are offline, please check your internet connection.</h1>;
   }
   return (
     <div className="body">
