@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { RESTAURANTNAME } from '../utils/constants';
 import { NavLink } from 'react-router-dom';
-
+import useLiveStatus from '../utils/useLiveStatus';
 import appLogo from '../../assets/restaurant.png';
 const Header = () => {
   const [loginBtn, setLoginBtn] = useState('Login');
+  const isOnline = useLiveStatus();
   return (
     <div className="header">
       <div className="logo-container">
@@ -14,6 +15,7 @@ const Header = () => {
 
       <div className="nav-items">
         <ul className="links">
+          <li>{isOnline ? '🟢' : '🔴'}</li>
           <li className="link-item" onClick={() => {}}>
             <NavLink
               to="/"
