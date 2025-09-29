@@ -17,8 +17,9 @@
 }
 .nav-items > ul > li {
   padding: 0px 20px;
-  font-size: x-large;
+  font-size: larger;
 }
+
 .nav-items > ul > li > Link {
   text-decoration: none;
 }
