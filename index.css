@@ -17,8 +17,14 @@
 }
 .nav-items > ul > li {
   padding: 0px 20px;
-  font-size: x-large;
+  font-size: larger;
 }
+.status {
+  margin: 0px 10px;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
 .nav-items > ul > li > Link {
   text-decoration: none;
 }

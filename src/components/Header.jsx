@@ -15,7 +15,6 @@ const Header = () => {
 
       <div className="nav-items">
         <ul className="links">
-          <li>{isOnline ? '🟢' : '🔴'}</li>
           <li className="link-item" onClick={() => {}}>
             <NavLink
               to="/"
@@ -48,6 +47,7 @@ const Header = () => {
               Cart
             </NavLink>
           </li>
+          <li className="status">{isOnline ? 'live 🟢' : 'offline 🔴'}</li>
           <button
             className="login-button"
             onClick={() => {

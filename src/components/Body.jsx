@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import restaurantList from '../utils/restaurantListData';
 import RestaurantCard from './RestaurantCard';
 import Shimmer from './Shimmer';
@@ -13,12 +13,7 @@ const Body = () => {
   const [restaurantListFiltered, setFilteredListRestaurant] =
     useState(restaurantList);
   const isOnline = useLiveStatus();
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
-  // const fetchData = () => {
-  //   const data = fetch();
-  // };
+
   if (restaurantListToBeFiltered.length === 0) {
     return <Shimmer />;
   }
@@ -27,11 +22,6 @@ const Body = () => {
   }
   return (
     <div className="body">
-      {/* <div className="caution"> - Resolved using React Router.
-        Add extension to link with : /contact-us , /about-us , /home , /cart ,
-        to see other pages. Currently not linked to tab menu due to other
-        components build.
-      </div> */}
       <div className="filter">
         <SearchFilter
           restaurantListFiltered={restaurantList}
