@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { RESTAURANTNAME } from '../utils/constants';
+import { RESTAURANTNAME, ISLIVE, ISOFFLINE } from '../utils/constants';
 import { NavLink } from 'react-router-dom';
 import useLiveStatus from '../utils/useLiveStatus';
 import appLogo from '../../assets/restaurant.png';
@@ -47,7 +47,7 @@ const Header = () => {
               Cart
             </NavLink>
           </li>
-          <li className="status">{isOnline ? 'live 🟢' : 'offline 🔴'}</li>
+          <li className="status">{isOnline ? ISLIVE : ISOFFLINE}</li>
           <button
             className="login-button"
             onClick={() => {
