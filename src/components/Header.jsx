@@ -47,6 +47,14 @@ const Header = () => {
               Cart
             </NavLink>
           </li>
+          <li className="link-item">
+            <NavLink
+              to="/Groceries"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              Groceries
+            </NavLink>
+          </li>
           <li className="status">{isOnline ? ISLIVE : ISOFFLINE}</li>
           <button
             className="login-button"
