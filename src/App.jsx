@@ -1,4 +1,4 @@
-import React, { Children, lazy, Suspense } from 'react';
+import React, { children, lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router';
 import AboutUs from './components/AboutUs';
