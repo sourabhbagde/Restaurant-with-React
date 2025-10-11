@@ -9,8 +9,9 @@ https://stalwart-eclair-f1e4f8.netlify.app/
 
 # to run manually at local:
 
-npm i
-npm start
+npm i       -  npm install dependencies.
+
+npm start   -  start run
 
 # mock data at local:
 
