@@ -15,4 +15,4 @@ npm start   -  start run
 
 # mock data at local:
 
-mock data is for dummy data created for non-APIs and to fill frontend data with dummy data in restaurantListData.js
+mock data is created for non-APIs and to fill frontend data with dummy data in restaurantListData.js
