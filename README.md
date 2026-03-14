@@ -16,3 +16,5 @@ npm start   -  start run
 # mock data at local:
 
 mock data is created for non-APIs and to fill frontend data with dummy data in restaurantListData.js
+
+This app has all the react features and components to understand better on how renders and cycle works.
