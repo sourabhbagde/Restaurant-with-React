@@ -22,14 +22,14 @@ const Body = () => {
   }
   return (
     <div className="body">
-      <div className="filter">
+      <div className="search-filter-container flex items-center space-x-10 p-4">
         <SearchFilter
           restaurantListFiltered={restaurantList}
           setFilteredListRestaurant={setFilteredListRestaurant}
         />
-        <div className="filter-container">
+        <div className="filter-container flex rounded">
           <button
-            className="filter-btn"
+            className="filter-btn p-2 bg-green-500 text-white rounded"
             onClick={() => {
               console.log('Button Clicked');
 
@@ -44,7 +44,7 @@ const Body = () => {
           </button>
         </div>
       </div>
-      <div className="restaurant-container">
+      <div className="restaurant-container flex flex-wrap">
         {restaurantListFiltered.map((restaurant) => (
           <Link
             key={restaurant.data.id}
