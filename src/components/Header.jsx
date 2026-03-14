@@ -7,15 +7,19 @@ const Header = () => {
   const [loginBtn, setLoginBtn] = useState('Login');
   const isOnline = useLiveStatus();
   return (
-    <div className="header">
+    <div className="flex items-center justify-between bg-gray-100">
       <div className="logo-container">
-        <img className="logo" src={appLogo} alt="Restaurant App Logo"></img>
+        <img
+          className="w-25 h-25"
+          src={appLogo}
+          alt="Restaurant App Logo"
+        ></img>
       </div>
-      <span className="restaurant-name">{RESTAURANTNAME}</span>
+      <span className="font-bold text-xl text-gray-800">{RESTAURANTNAME}</span>
 
-      <div className="nav-items">
-        <ul className="links">
-          <li className="link-item" onClick={() => {}}>
+      <div className="flex items-center space-x-4 p-4 m-4">
+        <ul className="flex space-x-10 ">
+          <li className="link-item hover:bg-gray-200 p-4" onClick={() => {}}>
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? 'active' : '')}
@@ -23,7 +27,7 @@ const Header = () => {
               Home
             </NavLink>
           </li>
-          <li className="link-item">
+          <li className="link-item hover:bg-gray-200 p-4">
             <NavLink
               to="/about-us"
               className={({ isActive }) => (isActive ? 'active' : '')}
@@ -31,7 +35,7 @@ const Header = () => {
               About Us
             </NavLink>
           </li>
-          <li className="link-item">
+          <li className="link-item hover:bg-gray-200 p-4">
             <NavLink
               to="/contact-us"
               className={({ isActive }) => (isActive ? 'active' : '')}
@@ -39,7 +43,7 @@ const Header = () => {
               Contact Us
             </NavLink>
           </li>
-          <li className="link-item">
+          <li className="link-item hover:bg-gray-200 p-4">
             <NavLink
               to="/cart"
               className={({ isActive }) => (isActive ? 'active' : '')}
@@ -47,7 +51,7 @@ const Header = () => {
               Cart
             </NavLink>
           </li>
-          <li className="link-item">
+          <li className="link-item hover:bg-gray-200 p-4">
             <NavLink
               to="/Groceries"
               className={({ isActive }) => (isActive ? 'active' : '')}
@@ -55,7 +59,7 @@ const Header = () => {
               Groceries
             </NavLink>
           </li>
-          <li className="status">{isOnline ? ISLIVE : ISOFFLINE}</li>
+          <li className="status p-4">{isOnline ? ISLIVE : ISOFFLINE}</li>
           <button
             className="login-button"
             onClick={() => {
